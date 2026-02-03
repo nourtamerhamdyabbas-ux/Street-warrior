@@ -10,3 +10,5 @@ func _on_timer_timeout() -> void:
 	add_child(random_platform_instance)
 	
 	random_platform_instance.position = marker.position
+	var random_y_position: float = randf_range(300, 600)
+	random_platform_instance.position.y = random_y_position
