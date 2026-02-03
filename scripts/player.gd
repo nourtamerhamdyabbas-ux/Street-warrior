@@ -3,7 +3,7 @@ extends CharacterBody2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 const SPEED = 360.0
-const JUMP_VELOCITY = -800.0
+const JUMP_VELOCITY = -650.0
 
 
 
@@ -39,3 +39,5 @@ func _physics_process(delta: float) -> void:
 		animated_sprite_2d.flip_h = false
 	elif direction == -1.0:
 		animated_sprite_2d.flip_h = true
+		
+		

@@ -43,6 +43,7 @@ animations = [{
 size = Vector2(117.6875, 41.75)
 
 [node name="platform" type="StaticBody2D" unique_id=1669129377]
+scale = Vector2(1.5, 1.5)
 script = ExtResource("1_nlgqw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=894142055]
