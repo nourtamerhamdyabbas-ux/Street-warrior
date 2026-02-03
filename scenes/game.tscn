@@ -554,19 +554,13 @@ texture = ExtResource("3_iywne")
 9:22/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_gee14"]
-physics_layer_0/collision_layer = 2
-physics_layer_0/collision_mask = 0
+physics_layer_0/collision_layer = 8
+physics_layer_0/collision_mask = 8
 physics_layer_1/collision_layer = 1
 sources/2 = SubResource("TileSetAtlasSource_u5sy4")
 
 [node name="game" type="Node2D" unique_id=1668116935]
 position = Vector2(3933, 851)
-
-[node name="Node" type="Node" parent="." unique_id=1992389827]
-
-[node name="coin" parent="Node" unique_id=268189724 instance=ExtResource("10_vtaks")]
-position = Vector2(318, 631)
-collision_layer = 2
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=622484834]
 script = ExtResource("1_0tnpc")
@@ -620,32 +614,82 @@ position = Vector2(2584, 504)
 [node name="platform" parent="platforms" unique_id=1669129377 instance=ExtResource("5_iywne")]
 position = Vector2(2506, 522)
 
+[node name="coin8" parent="platforms/platform" unique_id=268189724 instance=ExtResource("10_vtaks")]
+position = Vector2(-1316.6667, 14.666687)
+scale = Vector2(0.6666667, 0.6666667)
+collision_layer = 2
+
 [node name="platform2" parent="platforms" unique_id=1646494123 instance=ExtResource("5_iywne")]
 position = Vector2(786, 716)
+
+[node name="coin7" parent="platforms/platform2" unique_id=581513542 instance=ExtResource("10_vtaks")]
+position = Vector2(-321.33334, -57.999985)
+scale = Vector2(0.6666667, 0.6666667)
+collision_layer = 2
 
 [node name="platform3" parent="platforms" unique_id=1386370596 instance=ExtResource("5_iywne")]
 position = Vector2(565, 586)
 
+[node name="coin6" parent="platforms/platform3" unique_id=1574447094 instance=ExtResource("10_vtaks")]
+position = Vector2(118.66666, 58)
+scale = Vector2(0.6666667, 0.6666667)
+collision_layer = 2
+
 [node name="platform4" parent="platforms" unique_id=21997566 instance=ExtResource("5_iywne")]
 position = Vector2(2232, 468)
 
-[node name="platform5" parent="platforms" unique_id=977821273 instance=ExtResource("5_iywne")]
-position = Vector2(346, 670)
+[node name="coin5" parent="platforms/platform4" unique_id=987590869 instance=ExtResource("10_vtaks")]
+position = Vector2(-836.6666, 94)
+scale = Vector2(0.6666667, 0.6666667)
+collision_layer = 2
 
 [node name="platform6" parent="platforms" unique_id=1869345652 instance=ExtResource("5_iywne")]
 position = Vector2(2000, 533)
 
+[node name="coin4" parent="platforms/platform6" unique_id=817327283 instance=ExtResource("10_vtaks")]
+position = Vector2(-520, 64)
+scale = Vector2(0.6666667, 0.6666667)
+collision_layer = 2
+
+[node name="platform5" parent="platforms" unique_id=977821273 instance=ExtResource("5_iywne")]
+position = Vector2(346, 670)
+
+[node name="coin3" parent="platforms/platform5" unique_id=402016895 instance=ExtResource("10_vtaks")]
+position = Vector2(738.6667, -84.66669)
+scale = Vector2(0.6666667, 0.6666667)
+collision_layer = 2
+
 [node name="platform7" parent="platforms" unique_id=305671069 instance=ExtResource("5_iywne")]
 position = Vector2(1747, 637)
+
+[node name="coin2" parent="platforms/platform7" unique_id=784208701 instance=ExtResource("10_vtaks")]
+position = Vector2(-29.333374, -27.333344)
+scale = Vector2(0.6666667, 0.6666667)
+collision_layer = 2
 
 [node name="platform8" parent="platforms" unique_id=553584731 instance=ExtResource("5_iywne")]
 position = Vector2(1497, 586)
 
+[node name="coin11" parent="platforms/platform8" unique_id=1642152563 instance=ExtResource("10_vtaks")]
+position = Vector2(313.33337, -60.666687)
+scale = Vector2(0.6666667, 0.6666667)
+collision_layer = 2
+
 [node name="platform9" parent="platforms" unique_id=1319690138 instance=ExtResource("5_iywne")]
 position = Vector2(1258, 675)
 
+[node name="coin10" parent="platforms/platform9" unique_id=1751720271 instance=ExtResource("10_vtaks")]
+position = Vector2(626.6667, -168.66666)
+scale = Vector2(0.6666667, 0.6666667)
+collision_layer = 2
+
 [node name="platform10" parent="platforms" unique_id=48109104 instance=ExtResource("5_iywne")]
 position = Vector2(1016, 651)
+
+[node name="coin9" parent="platforms/platform10" unique_id=866779513 instance=ExtResource("10_vtaks")]
+position = Vector2(990, -114)
+scale = Vector2(0.6666667, 0.6666667)
+collision_layer = 2
 
 [node name="killzone2" parent="." unique_id=669444715 instance=ExtResource("1_u5sy4")]
 position = Vector2(-1651, 174)
