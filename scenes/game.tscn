@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d2kmg4lm2t7hd"]
 
 [ext_resource type="Script" uid="uid://bb5omecw4ydnl" path="res://scripts/new_gd_script.gd" id="1_p57ef"]
+[ext_resource type="PackedScene" uid="uid://ciltp4solhdd5" path="res://scenes/killzone.tscn" id="1_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://dd3l2ythfevaj" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://drpr0rmnpaxop" path="res://assets/Assets/Stage Layers/back.png" id="2_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://q81oqmxnderl" path="res://assets/Assets/Stage Layers/tileset.png" id="3_iywne"]
@@ -1080,13 +1081,13 @@ physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_0tnpc")
 
 [node name="game" type="Node2D" unique_id=1668116935]
-position = Vector2(2867, 579)
+position = Vector2(2741, 579)
 
 [node name="tilemaps" type="Node" parent="." unique_id=688854790]
 script = ExtResource("1_p57ef")
 
 [node name="TileMap" type="TileMap" parent="tilemaps" unique_id=1778042560]
-position = Vector2(2867, 579)
+position = Vector2(2741, 579)
 scale = Vector2(2, 2)
 tile_set = SubResource("TileSet_gee14")
 format = 2
@@ -1096,7 +1097,7 @@ layer_0/tile_data = PackedInt32Array(65432, 196610, 20, 130968, 196610, 21, 1965
 layer_1/name = "Mid 1"
 
 [node name="TileMap2" type="TileMap" parent="tilemaps" unique_id=1562494454]
-position = Vector2(2867, 579)
+position = Vector2(2741, 579)
 scale = Vector2(2, 2)
 tile_set = SubResource("TileSet_vtaks")
 format = 2
@@ -1123,38 +1124,41 @@ wait_time = 2.0
 autostart = true
 
 [node name="Marker2D" type="Marker2D" parent="PlatformsSpawner" unique_id=448482565]
-position = Vector2(2571, 262)
+position = Vector2(2445, 262)
 
 [node name="platforms" type="Node" parent="." unique_id=1043762672]
 
 [node name="platform" parent="platforms" unique_id=1669129377 instance=ExtResource("5_iywne")]
-position = Vector2(1266, 470)
+position = Vector2(1140, 470)
 
 [node name="platform2" parent="platforms" unique_id=1646494123 instance=ExtResource("5_iywne")]
-position = Vector2(1819, 484)
+position = Vector2(1693, 484)
 
 [node name="platform3" parent="platforms" unique_id=1386370596 instance=ExtResource("5_iywne")]
-position = Vector2(1665, 451)
+position = Vector2(1539, 451)
 
 [node name="platform4" parent="platforms" unique_id=21997566 instance=ExtResource("5_iywne")]
-position = Vector2(1534, 508)
+position = Vector2(1408, 508)
 
 [node name="platform5" parent="platforms" unique_id=977821273 instance=ExtResource("5_iywne")]
-position = Vector2(1385, 529)
+position = Vector2(1259, 529)
 
 [node name="platform6" parent="platforms" unique_id=1869345652 instance=ExtResource("5_iywne")]
-position = Vector2(2536, 276)
+position = Vector2(2410, 276)
 
 [node name="platform7" parent="platforms" unique_id=305671069 instance=ExtResource("5_iywne")]
-position = Vector2(2380, 325)
+position = Vector2(2254, 325)
 
 [node name="platform8" parent="platforms" unique_id=553584731 instance=ExtResource("5_iywne")]
-position = Vector2(2250, 387)
+position = Vector2(2124, 387)
 
 [node name="platform9" parent="platforms" unique_id=1319690138 instance=ExtResource("5_iywne")]
-position = Vector2(2091, 362)
+position = Vector2(1965, 362)
 
 [node name="platform10" parent="platforms" unique_id=48109104 instance=ExtResource("5_iywne")]
-position = Vector2(1945, 418)
+position = Vector2(1819, 418)
+
+[node name="killzone2" parent="." unique_id=669444715 instance=ExtResource("1_u5sy4")]
+position = Vector2(-2022, 352)
 
 [connection signal="timeout" from="PlatformsSpawner/Timer" to="PlatformsSpawner" method="_on_timer_timeout"]
