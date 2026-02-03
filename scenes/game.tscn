@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://d2kmg4lm2t7hd"]
 
+[ext_resource type="Script" uid="uid://cmiwd0apnhhyd" path="res://scripts/hud.gd" id="1_0tnpc"]
+[ext_resource type="Script" uid="uid://drdt75iohx714" path="res://scripts/game_manager.gd" id="1_gee14"]
 [ext_resource type="Script" uid="uid://bb5omecw4ydnl" path="res://scripts/new_gd_script.gd" id="1_p57ef"]
 [ext_resource type="PackedScene" uid="uid://ciltp4solhdd5" path="res://scenes/killzone.tscn" id="1_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://dd3l2ythfevaj" path="res://scenes/player.tscn" id="1_uwrxv"]
@@ -7,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://q81oqmxnderl" path="res://assets/Assets/Stage Layers/tileset.png" id="3_iywne"]
 [ext_resource type="Script" uid="uid://dktbl7iho7bpt" path="res://scripts/platforms_spawner.gd" id="4_p57ef"]
 [ext_resource type="PackedScene" uid="uid://fmn3utadsgur" path="res://scenes/platform.tscn" id="5_iywne"]
+[ext_resource type="PackedScene" uid="uid://jdkcc7jway72" path="res://scenes/coin.tscn" id="10_vtaks"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u5sy4"]
 texture = ExtResource("3_iywne")
@@ -559,6 +562,29 @@ sources/2 = SubResource("TileSetAtlasSource_u5sy4")
 [node name="game" type="Node2D" unique_id=1668116935]
 position = Vector2(3933, 851)
 
+[node name="Node" type="Node" parent="." unique_id=1992389827]
+
+[node name="coin" parent="Node" unique_id=268189724 instance=ExtResource("10_vtaks")]
+position = Vector2(318, 631)
+collision_layer = 2
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=622484834]
+script = ExtResource("1_0tnpc")
+
+[node name="ScoreLabel" type="Label" parent="HUD" unique_id=343845180]
+anchors_preset = -1
+anchor_right = 0.266
+anchor_bottom = 0.135
+offset_left = 63.0
+offset_top = 15.0
+offset_right = 21.519989
+offset_bottom = 17.799995
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0.7176471, 1, 0.05490196, 1)
+
+[node name="GameManager" type="Node2D" parent="." unique_id=1395313659]
+script = ExtResource("1_gee14")
+
 [node name="tilemaps" type="Node" parent="." unique_id=688854790]
 script = ExtResource("1_p57ef")
 
@@ -574,7 +600,9 @@ layer_1/name = "Mid 1"
 script = ExtResource("3_0tnpc")
 
 [node name="player" parent="." unique_id=1911331129 instance=ExtResource("1_uwrxv")]
+unique_name_in_owner = true
 position = Vector2(-3916, -666)
+collision_mask = 3
 
 [node name="PlatformsSpawner" type="Node" parent="." unique_id=123314369]
 script = ExtResource("4_p57ef")
@@ -585,39 +613,39 @@ wait_time = 2.0
 autostart = true
 
 [node name="Marker2D" type="Marker2D" parent="PlatformsSpawner" unique_id=448482565]
-position = Vector2(2424, 345)
+position = Vector2(2584, 504)
 
 [node name="platforms" type="Node" parent="." unique_id=1043762672]
 
 [node name="platform" parent="platforms" unique_id=1669129377 instance=ExtResource("5_iywne")]
-position = Vector2(2345, 359)
+position = Vector2(2506, 522)
 
 [node name="platform2" parent="platforms" unique_id=1646494123 instance=ExtResource("5_iywne")]
-position = Vector2(625, 553)
+position = Vector2(786, 716)
 
 [node name="platform3" parent="platforms" unique_id=1386370596 instance=ExtResource("5_iywne")]
-position = Vector2(404, 423)
+position = Vector2(565, 586)
 
 [node name="platform4" parent="platforms" unique_id=21997566 instance=ExtResource("5_iywne")]
-position = Vector2(2071, 305)
+position = Vector2(2232, 468)
 
 [node name="platform5" parent="platforms" unique_id=977821273 instance=ExtResource("5_iywne")]
-position = Vector2(185, 507)
+position = Vector2(346, 670)
 
 [node name="platform6" parent="platforms" unique_id=1869345652 instance=ExtResource("5_iywne")]
-position = Vector2(1839, 370)
+position = Vector2(2000, 533)
 
 [node name="platform7" parent="platforms" unique_id=305671069 instance=ExtResource("5_iywne")]
-position = Vector2(1586, 474)
+position = Vector2(1747, 637)
 
 [node name="platform8" parent="platforms" unique_id=553584731 instance=ExtResource("5_iywne")]
-position = Vector2(1336, 423)
+position = Vector2(1497, 586)
 
 [node name="platform9" parent="platforms" unique_id=1319690138 instance=ExtResource("5_iywne")]
-position = Vector2(1097, 512)
+position = Vector2(1258, 675)
 
 [node name="platform10" parent="platforms" unique_id=48109104 instance=ExtResource("5_iywne")]
-position = Vector2(855, 488)
+position = Vector2(1016, 651)
 
 [node name="killzone2" parent="." unique_id=669444715 instance=ExtResource("1_u5sy4")]
 position = Vector2(-1651, 174)
