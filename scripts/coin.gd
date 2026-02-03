@@ -1,6 +1,8 @@
 extends Area2D 
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 func _on_body_entered(body: Node2D) -> void:
+
 
 	if body.name == "player": 
 
@@ -9,4 +11,4 @@ func _on_body_entered(body: Node2D) -> void:
 		if hud:
 			hud.add_bonus_points(20) 
 		
-		queue_free()
+	animation_player.play("pickup")

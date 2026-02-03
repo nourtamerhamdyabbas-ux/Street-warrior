@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://bb5omecw4ydnl" path="res://scripts/new_gd_script.gd" id="1_p57ef"]
 [ext_resource type="PackedScene" uid="uid://ciltp4solhdd5" path="res://scenes/killzone.tscn" id="1_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://dd3l2ythfevaj" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="FontFile" uid="uid://byhmignxjjn3k" path="res://previous assets/PixelOperator8.ttf" id="2_vtaks"]
 [ext_resource type="Script" uid="uid://4whri2c7xssc" path="res://scripts/tile_map.gd" id="3_0tnpc"]
 [ext_resource type="Texture2D" uid="uid://q81oqmxnderl" path="res://assets/Assets/Stage Layers/tileset.png" id="3_iywne"]
 [ext_resource type="Script" uid="uid://dktbl7iho7bpt" path="res://scripts/platforms_spawner.gd" id="4_p57ef"]
@@ -574,6 +575,7 @@ offset_right = 21.519989
 offset_bottom = 17.799995
 scale = Vector2(2, 2)
 theme_override_colors/font_color = Color(0.7176471, 1, 0.05490196, 1)
+theme_override_fonts/font = ExtResource("2_vtaks")
 
 [node name="GameManager" type="Node2D" parent="." unique_id=1395313659]
 script = ExtResource("1_gee14")
