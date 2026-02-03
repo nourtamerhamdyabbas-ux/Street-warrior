@@ -97,7 +97,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ssuvv"]
-radius = 21.0
+radius = 12.041593
 
 [sub_resource type="Animation" id="Animation_d14el"]
 length = 0.001
@@ -201,15 +201,15 @@ _data = {
 script = ExtResource("1_i64fm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1197746116]
-position = Vector2(35.5, -19.5)
-scale = Vector2(5.4375, 3.4375)
+position = Vector2(-14.749999, 12.749997)
+scale = Vector2(3.46875, 1.8437496)
 sprite_frames = SubResource("SpriteFrames_ls27i")
 autoplay = "default"
 frame = 4
 frame_progress = 0.93578553
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=49439825]
-position = Vector2(36, -18.999998)
+position = Vector2(-14.999999, 13)
 rotation = -0.02035057
 shape = SubResource("CircleShape2D_ssuvv")
 debug_color = Color(0.0967337, 0.5234191, 0.9999998, 0.41960785)

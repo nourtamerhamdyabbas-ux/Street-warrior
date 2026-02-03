@@ -13,7 +13,7 @@ position = Vector2(21, 3)
 shape = SubResource("WorldBoundaryShape2D_xlapc")
 
 [node name="Timer" type="Timer" parent="CollisionShape2D" unique_id=1747120942]
-wait_time = 0.611
+wait_time = 1.0859999999999999
 one_shot = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
